@@ -53,8 +53,7 @@ public class LoginWebController {
     // ---- helper rol ----
     private boolean esAdmin(HttpSession session) {
         User u = (User) session.getAttribute("usuarioLogueado");
-        return u != null && "admin".equalsIgnoreCase(u.getRol());
-    }
+return u != null && ("admin".equalsIgnoreCase(u.getRol()) || "administrador".equalsIgnoreCase(u.getRol()));    }
 
     // =========================
     // BITÁCORA
